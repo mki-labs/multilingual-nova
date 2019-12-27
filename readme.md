@@ -16,6 +16,15 @@ You can publish the config file:
 php artisan vendor:publish --provider="Digitalcloud\MultilingualNova\FieldServiceProvider" --tag=config
 ```
 
+To enable subdirectory support `config/app.php`
+
+```php
+
+<?php
+'path' => env('APP_PATH', '/sub_directory'),
+...
+```
+
 This is the contents of the file which will be published at `config/multilingual.php`
 
 ```php
