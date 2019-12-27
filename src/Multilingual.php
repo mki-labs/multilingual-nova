@@ -24,7 +24,7 @@ class Multilingual extends Field
         }, $this->getSupportLocales());
 
         $this->setLocales($locales);
-        $this->withMeta(['url' => config('nova.path')]);
+        $this->withMeta(['url' => config('app.path') . config('nova.path')]);
     }
 
     public function fill(NovaRequest $request, $model)
